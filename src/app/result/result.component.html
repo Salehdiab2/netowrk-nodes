@@ -1,0 +1,20 @@
+
+
+<div class="content" style="max-height:650px ;">
+    <mat-table [dataSource]="dataSource" >
+        <!-- ID Column -->
+        <ng-container matColumnDef="Id">
+            <mat-header-cell *matHeaderCellDef> מדד </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Name}} </mat-cell>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> ערך בדיקה </mat-header-cell>
+            <mat-cell *matCellDef="let element" field="name">{{element.value | number : '1.3-3' }}</mat-cell>   
+        </ng-container>
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    </div>
+    
