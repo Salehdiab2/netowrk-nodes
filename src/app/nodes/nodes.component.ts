@@ -23,7 +23,7 @@ export class NodesComponent implements OnInit {
 
   }
   setDataSourceAttributes() {
-    this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginator; 
   }
   FillData(arrayOfNewNodes: any) {
     this.arrayOfNewNodes = arrayOfNewNodes;
